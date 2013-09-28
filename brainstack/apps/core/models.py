@@ -30,7 +30,7 @@ class Project(models.Model):
     def hash(self):
         return self._hash
 
-    participants = models.ManyToManyField(User, trough='Participant',
+    participants = models.ManyToManyField(User, through='Participant',
         related_name='projects', blank=True, null=True)
 
     def __unicode__(self):
@@ -50,9 +50,9 @@ class Task(models.Model):
         ordering = ['priority']
 
     PRIORITIES = Enumeration([
-        (1, 'HIGHT', _('Hight')),
-        (2, 'NORMAL', _('Normal'))
-        (3, 'LOW', _('Low'))
+        (1, 'HIGH', _('High')),
+        (2, 'NORMAL', _('Normal')),
+        (3, 'LOW', _('Low')),
         (4, 'SOMEDAY', _('Someday'))
         ])
 
@@ -66,7 +66,7 @@ class Task(models.Model):
     start_date_time = models.DateTimeField(blank=True, null=True)
     executor = models.ForeignKey(Participant, blank=True, null=True)
     priority = models.PositiveIntegerField(_('priority'), choices=PRIORITIES)
-    created_by = models.ForeignKey(User, trough='Participant')
+    created_by = models.ForeignKey(User, through='Participant')
 
     def __unicode__(self):
         return self.title
