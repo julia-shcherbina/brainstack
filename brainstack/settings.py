@@ -133,10 +133,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # third party
     'django_nose',
+    'rest_framework',
     'south',
-
-
     # own
+    'api',
     'core',
 )
 
@@ -178,3 +178,13 @@ try:
     from settings_production import *
 except ImportError:
     pass
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_MODEL_SERIALIZER_CLASS':
+    'rest_framework.serializers.HyperlinkedModelSerializer',
+
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

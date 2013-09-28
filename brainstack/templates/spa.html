@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    This will be a main page of brainstack application
+    <img src="{% static 'image.jpg' %}" alt="Image">
+{% endblock content %}
+
+
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'js/app.js' %}"></script>
+    
+{% endblock js %} 
