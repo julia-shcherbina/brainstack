@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* line 17, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -345,7 +345,7 @@ a {
 }
 
 /* line 11, ../sass/_task.scss */
-h1 {
+h1, h2 {
   padding-left: 20px;
   color: #666666;
   font-size: 3.2em;
@@ -364,7 +364,7 @@ h1 {
 
 /* line 28, ../sass/_task.scss */
 .task-table {
-  padding: 40px 0;
+  padding: 40px 0 0 0;
 }
 /* line 30, ../sass/_task.scss */
 .task-table .cube {
@@ -581,8 +581,8 @@ h1 {
   color: #FFFFFF;
   font-size: 1.4em;
   font-weight: bold;
-  line-height: 1;
-  padding: 3px 6px;
+  line-height: 1.4;
+  padding: 3px 7px 1px;
   position: absolute;
   right: 0;
   top: -4px;
@@ -780,4 +780,223 @@ h1 {
   border-radius: 7px 7px 7px 7px;
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
   height: 100%;
+}
+
+/* line 3, ../sass/_launch.scss */
+.launch {
+  position: relative;
+}
+
+/* line 7, ../sass/_launch.scss */
+.launch-pos {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 200px;
+  margin-left: -400px;
+  width: 800px;
+}
+
+/* line 18, ../sass/_launch.scss */
+.launch .cube1 {
+  display: block;
+  margin-top: 33px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+  width: 248px;
+}
+/* line 25, ../sass/_launch.scss */
+.launch .cube1 .cube-text {
+  color: #FFFFFF;
+  font-weight: bold;
+  left: 4px;
+  position: absolute;
+  top: 67px;
+}
+/* line 33, ../sass/_launch.scss */
+.launch .cube1 .cube-text h1 {
+  color: #fff;
+  font-size: 3.6em;
+}
+/* line 38, ../sass/_launch.scss */
+.launch .cube1 .cube-inner {
+  background: none repeat scroll 0 0 #94CD4C;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #94cd4c), color-stop(100%, #a0d360));
+  background-image: -webkit-linear-gradient(left top, #94cd4c, #a0d360);
+  background-image: -moz-linear-gradient(left top, #94cd4c, #a0d360);
+  background-image: -o-linear-gradient(left top, #94cd4c, #a0d360);
+  background-image: linear-gradient(left top, #94cd4c, #a0d360);
+}
+/* line 43, ../sass/_launch.scss */
+.launch .cube1 .cube-inner:hover {
+  margin-top: -15px;
+}
+/* line 48, ../sass/_launch.scss */
+.launch .cube2 {
+  display: block;
+  height: 320px;
+  left: 227px;
+  position: absolute;
+  top: -35px;
+  width: 330px;
+  z-index: 3;
+}
+/* line 56, ../sass/_launch.scss */
+.launch .cube2 .cube-text {
+  color: #FFFFFF;
+  font-weight: 100;
+  left: 12px;
+  position: absolute;
+  top: 67px;
+}
+/* line 63, ../sass/_launch.scss */
+.launch .cube2 .cube-text p {
+  font-family: "Lobster",'Helvetica', Arial, Sans-serif;
+  font-size: 2.2em;
+  margin: 0 0 10px 0;
+}
+/* line 69, ../sass/_launch.scss */
+.launch .cube2 .cube-inner {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #0066cc), color-stop(100%, #4da6ff));
+  background-image: -webkit-linear-gradient(left top, #0066cc, #4da6ff);
+  background-image: -moz-linear-gradient(left top, #0066cc, #4da6ff);
+  background-image: -o-linear-gradient(left top, #0066cc, #4da6ff);
+  background-image: linear-gradient(left top, #0066cc, #4da6ff);
+}
+/* line 73, ../sass/_launch.scss */
+.launch .cube2 .cube-inner:hover {
+  margin-top: -15px;
+}
+/* line 78, ../sass/_launch.scss */
+.launch .cube3 {
+  display: block;
+  height: 222px;
+  left: 475px;
+  position: absolute;
+  top: -12px;
+  width: 326px;
+  z-index: 2;
+}
+/* line 86, ../sass/_launch.scss */
+.launch .cube3 .cube-text {
+  left: 95px;
+  position: absolute;
+  top: 16px;
+}
+/* line 91, ../sass/_launch.scss */
+.launch .cube3 .cube-inner {
+  background: #fff;
+}
+/* line 93, ../sass/_launch.scss */
+.launch .cube3 .cube-inner:hover {
+  margin-top: -15px;
+}
+
+/* line 102, ../sass/_launch.scss */
+.launch .cube-inner {
+  background-color: #FFFFFF;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 47px 29px -27px rgba(146, 161, 173, 0.9);
+  height: 100%;
+  position: absolute;
+  -webkit-transition: margin-top 0.5s ease;
+  -webkit-transition-delay: 0s;
+  -moz-transition: margin-top 0.5s ease 0s;
+  -o-transition: margin-top 0.5s ease 0s;
+  transition: margin-top 0.5s ease 0s;
+  width: 100%;
+}
+/* line 113, ../sass/_launch.scss */
+.launch .cube-cover {
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+}
+/* line 120, ../sass/_launch.scss */
+.launch .cube-shadow {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  box-shadow: -14px 0 7px -2px rgba(0, 0, 0, 0.2) inset;
+}
+/* line 127, ../sass/_launch.scss */
+.launch .cube-border {
+  display: block;
+  border-bottom: 11px solid #D3D9DC;
+  border-left: 18px dashed rgba(0, 0, 0, 0);
+  border-right: 18px dashed rgba(0, 0, 0, 0);
+  position: relative;
+  top: -11px;
+}
+/* line 134, ../sass/_launch.scss */
+.launch .cube-border:after {
+  box-shadow: 0 -4px 4px 1px rgba(255, 255, 255, 0.4);
+  content: "";
+  height: 1px;
+  left: -3%;
+  position: absolute;
+  top: 10px;
+  width: 106%;
+}
+
+/* line 148, ../sass/_launch.scss */
+.launch .btn-project-create {
+  background: none repeat scroll 0 0 #94CD4C;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 8px 35px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  margin: 36px 0 0 0;
+}
+/* line 165, ../sass/_launch.scss */
+.launch input[type="text"] {
+  color: #000;
+  background: #fff;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.4em;
+  line-height: 1;
+  padding: 5px;
+  width: 100%;
+  margin: 0 0 10px 0;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+  border-radius: 10px 10px 10px 10px;
+  -moz-box-sizing: border-box;
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-radius: 10px 10px 10px 10px;
+  padding: 7px 12px;
+  width: 100%;
+}
+/* line 61, ../sass/_mixin.scss */
+.launch input[type="text"].placeholder {
+  color: black;
+}
+/* line 64, ../sass/_mixin.scss */
+.launch input[type="text"]:-moz-placeholder {
+  color: black;
+}
+/* line 67, ../sass/_mixin.scss */
+.launch input[type="text"]::-webkit-input-placeholder {
+  color: black;
+}
+/* line 187, ../sass/_launch.scss */
+.launch form label {
+  color: #000000;
+  display: block;
+  font-size: 1.6em;
+  margin: 0 0 2px;
 }
