@@ -11,3 +11,4 @@ six==1.4.1
 waitress==0.8.7
 wsgiref==0.1.2
 South==0.8.2
+djangorestframework==2.3.8
