@@ -40,112 +40,28 @@
 
 <section>
   <div class="wrapper">
-    <div class="layout-main">
-      
-      <div class="layout-left">
-        
-      </div>
-      <div class="layout-right">
-        
-      </div>
-      
-    </div>   
     
-    <!--<div class="tracker-table">
-      <div class="item">
-        
-        <div class="top">
-          <i class="number">1</i>
-          <h3 class="nickname">BrainCustomer Name</h3>
-        </div>
-        
-        <div class="middle">
-          <a class="avatar" href="#"><img src="" alt="avatar"></a>
-          <div class="task">
-            <h4 class="task-name">Lorem ipsum dolor sit amet lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi u</h4>
-            <a href="#" class="task-add">+ add desc </a>
-            <div class="task-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-          </div>
-        </div>
-        
-        <div class="bottom">
-          progress
-          <div class="progress">
-            
-          </div>
-        </div>
-        
-      </div>
-    </div>-->
   <div class="task-wrap">
-    
-     <!--<h1>BrainPanic</h1>-->
      <h2>BrainStack</h2>
+     <div class="btn-wrap"><a class="js-task-add task-add" href="#" data-popup="task-add"> create new task</a></div>
      
-   <!-- <a class="task-add" href="#">
-      <div class="cube">
-        <i class="cube-top"></i>
+     <div class="js-popup-task-add popup-task-add" data-popup="task-add">
+       <div class="wrap">
+         <form action="./">
+           <label for="task-name">Enter name for task</label>
+           <input id="task-name" type="text" palceholder="Enter name for task">
       
-        <p class="text">
-          Create new task
-        </p>
-      </div>
-    </a>-->
-    <!-- <a class="task-add" href="#">
-       <div class="inner">
-         <i class="cover"></i>
-         <i class="shadow"></i>
-         <p class="text">Create new task</p>
-         <i class="border"></i>
-       </div>
-       
-     </a>-->
+           <label for="task-desc">Enter name for task description</label>
+           <textarea id="task-desc" cols="30" rows="4" value="Enter name for task description"></textarea>
+           
+           <div class="btn-wrap"><a class="task-add" href="#"> enter</a></div>
+           
+         </form>
+       </div> 
+     </div>
       
-      <div class="btn-wrap"><a class="task-add" href="#"> create new task</a></div>
       <div class="task-table">
-      
-       
-       
-        <!-- <table>
-           <tr>
-             <th>name</th>
-             <th>desc</th>
-             <th>priority</th>
-           </tr>
-         </table>-->
-      
-        <!--<div class="task-item">
-      
-          <div class="cube">
-            <i class="cube-top"></i>
             
-            <div class="task-status"><p>New</p></div> 
-            
-            <div class="task-layout">
-              <div class="col col45">
-                <header class="task-name">task name Lorem ipsum dolor sit amet,.</header> 
-              </div>
-              <div class="col col30">
-                <div class="task-desc">
-                  <p class="task-short-desc"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
-                  <div class="hidden">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col col20">
-                <p>estimate 4hour</p>
-              </div>
-            </div>
-            
-            <div class="task-priority priority-high"><p>High</p></div>
-            <i class="cube-bottom-shadow"></i>
-          </div>
-        
-        </div>-->
-          
         <div class="task-item task-common">
     
           <div class="cube">
@@ -260,7 +176,6 @@
       
         </div>   
        
-     
   </div>   
   </div>
 </section>
@@ -270,6 +185,21 @@
       
   </div>  
 </footer>
+
+<!--<div class="popup-container js-popup" data-popup="task-add">
+  <div class="popup-overlay"></div>
+  <div class="popup-wrapper popup">
+    <div>
+      <form action="./">
+        <label for="task-name">Enter name for task</label>
+        <input id="task-name" type="text" palceholder="Enter name for task">
+   
+        <label for="task-desc">Enter name for task description</label>
+        <textarea id="task-desc" cols="30" rows="10" value="Enter name for task description"></textarea>
+      </form>
+    </div> 
+  </div>
+</div>-->
 
 <script src="js/jquery-1.9.0.js"></script>
 <script src="js/brainPanic.js"></script>

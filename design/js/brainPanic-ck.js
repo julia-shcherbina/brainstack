@@ -1,0 +1,1 @@
+$(function(){(function(){var e=$(".js-popup-task-add"),t=$(".js-task-add"),n=e.find(".popup-close");console.log(e);t.click("live",function(t){e.hide();e.fadeIn("slow");t.preventDefault()});n.click("live",function(t){e.hide();t.preventDefault()})})()});
