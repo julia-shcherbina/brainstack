@@ -6,12 +6,13 @@ from .user_profile_model import UserProfile
 from ..choices import ROLE
 
 
-class Participant(models.Model):
+class Participation(models.Model):
     class Meta:
         app_label = 'core'
 
     user = models.ForeignKey(UserProfile, verbose_name=_('User'))
-    project = models.ForeignKey(Project, verbose_name=_('Project'))
+    project = models.ForeignKey(Project, verbose_name=_('Project'),
+        related_name='participants')
     role = models.PositiveIntegerField(_('role'), choices=ROLE,
         default=ROLE.CONTRIBUTOR)
 
