@@ -12,7 +12,8 @@ class Participant(models.Model):
 
     user = models.ForeignKey(User, verbose_name=_('User'))
     project = models.ForeignKey(Project, verbose_name=_('Project'))
-    role = models.PositiveIntegerField(_('role'), choices=ROLE)
+    role = models.PositiveIntegerField(_('role'), choices=ROLE,
+        default=ROLE.CONTRIBUTOR)
 
     def __unicode__(self):
         return self.user.username
