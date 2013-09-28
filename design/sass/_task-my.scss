@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+.task-my {
+  .avatar {
+    margin-right: 15px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 0 1px #CCCCCC;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    
+    text-align: center;
+    vertical-align: middle;
+    width: 60px;
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  .task-name {
+    font-weight: 600;
+    font-size: 1.3em;
+    color: #000;
+    
+  }
+  .nickname {
+     margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    color: $color-link;
+    font-weight: 600;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  .progress-wrap {
+     margin-top: 11px;
+  }
+  .progress {
+    background: none repeat scroll 0 0 padding-box #F1F1F1;
+        border-radius: 7px 7px 7px 7px;
+        box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
+        height: 22px;
+        width: 100%;
+  }
+  .progress-active {
+    background: none repeat scroll 0 0 #94CD4C;
+        border-radius: 7px 7px 7px 7px;
+        box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
+        height: 100%;
+  }
+}
