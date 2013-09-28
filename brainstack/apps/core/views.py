@@ -1,4 +1,5 @@
-from django.contrib.auth import login
+from django.core.urlresolvers import reverse
+from django.contrib.auth import login, authenticate
 from django.views.generic import FormView, TemplateView
 
 from core.forms import ProjectForm
@@ -10,8 +11,13 @@ class HomeView(FormView):
 
     def form_valid(self, form):
         project, user = form.save()
+        user = authenticate(username=user.username, password=user.temporary_password)
         login(self.request, user)
-        super(HomeView, self).form_valid(self, form)
+        self.kwargs['project_id'] = project.id
+        return super(HomeView, self).form_valid(form)
+
+    def get_success_url(self):
+        return reverse('spa', args=[self.kwargs['project_id']])
 
 
 class SPAView(TemplateView):
