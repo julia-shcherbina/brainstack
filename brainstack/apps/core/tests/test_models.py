@@ -1,8 +1,6 @@
 from unittest import TestCase
 
-from django.contrib.auth.models import User
-
-from core.models import Project, Task, Participant
+from core.models import Project, Task, Participation, UserProfile
 
 
 class ProjectTestCase(TestCase):
@@ -14,15 +12,15 @@ class ProjectTestCase(TestCase):
         self.assertTrue(Project.objects.all().exists())
 
 
-class ParticipantTestCase(TestCase):
+class ParticipationTestCase(TestCase):
 
     def test_can_save(self):
-        Participant.objects.all().delete()
-        self.assertFalse(Participant.objects.all().exists())
+        Participation.objects.all().delete()
+        self.assertFalse(Participation.objects.all().exists())
         project = Project.objects.create()
-        user = User.objects.create()
-        Participant.objects.create(project=project, user=user)
-        self.assertTrue(Participant.objects.all().exists())
+        user = UserProfile.objects.create()
+        Participation.objects.create(project=project, user=user)
+        self.assertTrue(Participation.objects.all().exists())
 
 
 class TaskTestCase(TestCase):
@@ -30,9 +28,9 @@ class TaskTestCase(TestCase):
     def test_can_save(self):
         Task.objects.all().delete()
         self.assertFalse(Task.objects.all().exists())
-        user = User.objects.create(username="test")
+        user = UserProfile.objects.create(username="test")
         project = Project.objects.create()
-        participant = Participant.objects.create(project=project, user=user)
+        participant = Participation.objects.create(project=project, user=user)
         task_first = Task.objects.create(project=project, executor=participant,
             created_by=user)
         task_second = Task.objects.create(project=project, executor=participant,

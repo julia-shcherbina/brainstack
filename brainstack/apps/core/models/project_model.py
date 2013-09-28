@@ -3,7 +3,8 @@ import hashlib
 from django.db import models
 from django.utils.translation import ugettext as _
 
-from django.contrib.auth.models import User
+from core.choices import ROLE
+from .user_profile_model import UserProfile
 
 
 class Project(models.Model):
@@ -18,8 +19,8 @@ class Project(models.Model):
     def hash(self):
         return self._hash
 
-    participants = models.ManyToManyField(
-        User, through='Participant',
+    participation = models.ManyToManyField(
+        UserProfile, through='Participation',
         related_name='projects', blank=True, null=True)
 
     def __unicode__(self):
@@ -29,3 +30,7 @@ class Project(models.Model):
         if not self.pk and self.title:
             self._hash = hashlib.md5(self.title).hexdigest()
         super(Project, self).save(*args, **kwargs)
+
+    @property
+    def owner(self):
+        return self.participants.filter(role=ROLE.OWNER)

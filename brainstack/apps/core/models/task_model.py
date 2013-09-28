@@ -1,9 +1,9 @@
 from django.db import models
 from django.utils.translation import ugettext as _
-from django.contrib.auth.models import User
 
 from .project_model import Project
-from .participant_model import Participant
+from .user_profile_model import UserProfile
+from .participant_model import Participation
 from ..choices import PRIORITY
 
 
@@ -25,10 +25,10 @@ class Task(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     start_date_time = models.DateTimeField(blank=True, null=True)
-    executor = models.ForeignKey(Participant, blank=True, null=True)
+    executor = models.ForeignKey(Participation, blank=True, null=True)
     priority = models.PositiveIntegerField(_('priority'), choices=PRIORITY,
         default=PRIORITY.NORMAL)
-    created_by = models.ForeignKey(User, related_name='created_task')
+    created_by = models.ForeignKey(UserProfile, related_name='created_task')
 
     def __unicode__(self):
         return self.title
