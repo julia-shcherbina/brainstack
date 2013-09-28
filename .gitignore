@@ -3,3 +3,4 @@
 settings_local.py
 settings_production.py
 :memory
+design/.sass-cache/
