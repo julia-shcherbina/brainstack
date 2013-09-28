@@ -3,7 +3,7 @@ import hashlib
 from django.db import models
 from django.utils.translation import ugettext as _
 
-from django.contrib.auth.models import User
+from .user_profile_model import UserProfile
 
 
 class Project(models.Model):
@@ -19,7 +19,7 @@ class Project(models.Model):
         return self._hash
 
     participants = models.ManyToManyField(
-        User, through='Participant',
+        UserProfile, through='Participant',
         related_name='projects', blank=True, null=True)
 
     def __unicode__(self):
