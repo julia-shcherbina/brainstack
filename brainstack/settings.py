@@ -168,3 +168,13 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from settings_local import *
+except ImportError:
+    pass
+
+try:
+    from settings_production import *
+except ImportError:
+    pass
