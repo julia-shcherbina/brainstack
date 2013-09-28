@@ -1,7 +1,13 @@
-from django.views.generic.base import TemplateView
+from django.views.generic import FormView
+from django.core.urlresolvers import reverse
+
+from core.forms import ProjectForm
+from core.models import UserProfile, Project, Participant
+from core.choices import ROLE
 
 
-class MainTemplateView(TemplateView):
+class HomeView(FormView):
+    form_class = ProjectForm
     template_name = 'index.html'
 
 
