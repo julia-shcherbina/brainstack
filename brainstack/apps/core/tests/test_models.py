@@ -1,5 +1,6 @@
 from unittest import TestCase
 
+from core.models import Project, Task, Participant
 
 class ProjectTestCase(TestCase):
 
