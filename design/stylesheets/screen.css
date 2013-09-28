@@ -1,0 +1,783 @@
+@charset "utf-8";
+/* line 17, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("../fonts/lobster_1.3-webfont.eot");
+  src: url("../fonts/lobster_1.3-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lobster_1.3-webfont.svg") format("svg"), url("../fonts/lobster_1.3-webfont.woff") format("woff"), url("../fonts/lobster_1.3-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueUL";
+  src: url("../fonts/helveticaneue-ultralight-webfont.eot");
+  src: url("../fonts/helveticaneue-ultralight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/helveticaneue-ultralight-webfont.svg") format("svg"), url("../fonts/helveticaneue-ultralight-webfont.woff") format("woff"), url("../fonts/helveticaneue-ultralight-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 16, ../sass/_mixin.scss */
+.cf:before, .cf:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* line 22, ../sass/_mixin.scss */
+.cf:after {
+  clear: both;
+}
+
+/* line 16, ../sass/_mixin.scss */
+.layout-main:before, .layout-main:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* line 22, ../sass/_mixin.scss */
+.layout-main:after {
+  clear: both;
+}
+
+/* line 19, ../sass/_layout.scss */
+.col {
+  float: left;
+}
+
+/* line 22, ../sass/_layout.scss */
+.col10 {
+  width: 10%;
+}
+
+/* line 25, ../sass/_layout.scss */
+.col20 {
+  width: 20%;
+}
+
+/* line 28, ../sass/_layout.scss */
+.col30 {
+  width: 30%;
+}
+
+/* line 31, ../sass/_layout.scss */
+.col35 {
+  width: 35%;
+}
+
+/* line 34, ../sass/_layout.scss */
+.col50 {
+  width: 50%;
+}
+
+/* line 37, ../sass/_layout.scss */
+.col60 {
+  width: 60%;
+}
+
+/* line 40, ../sass/_layout.scss */
+.col70 {
+  width: 70%;
+}
+
+/* line 43, ../sass/_layout.scss */
+.col80 {
+  width: 80%;
+}
+
+/* line 16, ../sass/_mixin.scss */
+.task-layout:before, .task-layout:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* line 22, ../sass/_mixin.scss */
+.task-layout:after {
+  clear: both;
+}
+
+/* line 6, ../sass/_common.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 9, ../sass/_common.scss */
+.layout-left {
+  float: left;
+}
+
+/* line 12, ../sass/_common.scss */
+.left {
+  float: left;
+}
+
+/* line 15, ../sass/_common.scss */
+.layout-right {
+  float: right;
+}
+
+/* line 18, ../sass/_common.scss */
+.right {
+  float: right;
+}
+
+/* line 21, ../sass/_common.scss */
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+/* line 25, ../sass/_common.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 28, ../sass/_common.scss */
+input {
+  border: none;
+  padding: 0;
+}
+
+/* line 33, ../sass/_common.scss */
+input:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+}
+
+/* line 38, ../sass/_common.scss */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 42, ../sass/_common.scss */
+button {
+  border: none;
+  box-shadow: none;
+}
+
+/* line 46, ../sass/_common.scss */
+label {
+  cursor: pointer;
+}
+
+/* line 51, ../sass/_common.scss */
+body {
+  background: #fff;
+  font: 100 62.5%/1.2 'Helvetica', Arial, Sans-serif;
+  color: #666;
+  background-color: #F4F7F1;
+}
+
+/* line 60, ../sass/_common.scss */
+.wrapper {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*[HOMEPAGE] HEADER*/
+/*.tracker-table {
+  padding: 40px 0;
+  .item {
+    background: #F7F7F7;
+    border-radius: 10px;
+    padding: 15px 0 0 0;
+    @include box-shadow(rgba(0,0,0,.1) 0 0 2px 2px);
+  }
+  .top {
+    padding: 0 15px 10px 15px;
+  }
+  .middle {
+    padding: 10px 15px 10px 15px;
+  }
+  .bottom {
+   padding: 10px 15px 15px 15px;
+   background: #F0F0F0;
+   border-radius: 0 0 10px 10px; 
+  }
+  .nickname {
+    color: #333333;
+    display: inline-block;
+    font-size: 1.8em;
+    line-height: 1;
+    margin: 4px 0 0 10px;
+    vertical-align: middle;
+  }
+  .number {
+    background: #F0F0F0;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    line-height: 1;
+    padding: 6px 9px 5px;
+    vertical-align: middle;
+    border: 3px solid #FFFFFF;
+    color: #666;
+    //color: #fff;
+    font-size: 1.4em;
+    font-weight: 100;
+    //text-shadow: 0 0 1px #666666;
+  }
+  
+  .avatar {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 0 1px #CCCCCC;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    
+    text-align: center;
+    vertical-align: middle;
+    width: 40px;
+    img {
+      vertical-align: middle;
+    }
+  }
+  .task {
+    position: relative;
+    
+    @include inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    width: 93%;
+  }
+  .task-name {
+    font-size: 1.4em;
+    margin-right: 20px;
+  }
+  .task-desc {
+    display: none;
+  }
+  
+  .task-add {
+    border-bottom: 1px solid transparent;
+    color: #7FB0D2;
+    font-weight: bold;
+   
+    font-size: 10px;
+    text-transform: uppercase;
+   
+    
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}*/
+/* line 3, ../sass/_task.scss */
+a {
+  border-color: rgba(0, 102, 204, 0.3);
+  color: #0066CC;
+  cursor: pointer;
+}
+
+/* line 8, ../sass/_task.scss */
+.hidden {
+  display: none;
+}
+
+/* line 11, ../sass/_task.scss */
+h1 {
+  padding-left: 20px;
+  color: #666666;
+  font-size: 3.2em;
+  line-height: 1;
+  font-weight: bold;
+  padding-bottom: 5px;
+  font-family: "Lobster",'Helvetica', Arial, Sans-serif;
+}
+
+/* line 22, ../sass/_task.scss */
+.task-wrap {
+  background: none repeat scroll 0 0 #FFFFFF;
+  box-shadow: 0 0 15px #A8BDC9;
+  padding: 16px 20px;
+}
+
+/* line 28, ../sass/_task.scss */
+.task-table {
+  padding: 40px 0;
+}
+/* line 30, ../sass/_task.scss */
+.task-table .cube {
+  background-color: #FFFFFF;
+  padding: 20px 23px 13px;
+  position: relative;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+/* line 35, ../sass/_task.scss */
+.task-table .cube .cube-top {
+  display: block;
+  border-bottom: 17px solid #D3D9DC;
+  position: relative;
+  z-index: 1;
+  border-left: 19px dashed rgba(0, 0, 0, 0);
+  border-right: 19px dashed rgba(0, 0, 0, 0);
+  clear: both;
+  margin: -37px -25px 10px;
+}
+/* line 45, ../sass/_task.scss */
+.task-table .cube .cube-top:after {
+  box-shadow: 0 -4px 12px 4px rgba(248, 249, 250, 0.8);
+  content: "";
+  height: 1px;
+  left: -4px;
+  position: absolute;
+  top: 17px;
+  width: 101%;
+}
+/* line 55, ../sass/_task.scss */
+.task-table .cube .cube-top-shadow {
+  height: 42px;
+  margin: 0 -35px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+/* line 62, ../sass/_task.scss */
+.task-table .cube .cube-top-shadow:before {
+  background: url("../images/static/shadow.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  content: "";
+  height: 42px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100px;
+}
+/* line 71, ../sass/_task.scss */
+.task-table .cube .cube-top-shadow:after {
+  background: url("../images/static/shadow.png") no-repeat scroll 100% 0 rgba(0, 0, 0, 0);
+  content: "";
+  height: 42px;
+  left: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* line 81, ../sass/_task.scss */
+.task-table .cube .cube-bottom-shadow {
+  height: 42px;
+  margin: 0 -23px;
+  position: absolute;
+  bottom: -42px;
+  width: 100%;
+  z-index: 3;
+}
+/* line 88, ../sass/_task.scss */
+.task-table .cube .cube-bottom-shadow:before {
+  background: url("../images/static/shadow.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  content: "";
+  height: 42px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100px;
+}
+/* line 97, ../sass/_task.scss */
+.task-table .cube .cube-bottom-shadow:after {
+  background: url("../images/static/shadow.png") no-repeat scroll 100% 0 rgba(0, 0, 0, 0);
+  content: "";
+  height: 42px;
+  left: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 113, ../sass/_task.scss */
+.task-item {
+  margin: 0 0 27px 0;
+  font-weight: 100;
+  padding: 0 40px 0 20px;
+}
+/* line 120, ../sass/_task.scss */
+.task-item .task-priority {
+  text-align: center;
+  position: absolute;
+  margin-right: 20px;
+  right: -14px;
+  top: 0px;
+  width: 44px;
+  height: 30px;
+  text-align: center;
+}
+/* line 131, ../sass/_task.scss */
+.task-item .task-priority.priority-high {
+  background: red;
+}
+/* line 133, ../sass/_task.scss */
+.task-item .task-priority.priority-high:after {
+  border-top: 14px solid red;
+}
+/* line 137, ../sass/_task.scss */
+.task-item .task-priority.priority-normal {
+  background: orange;
+}
+/* line 139, ../sass/_task.scss */
+.task-item .task-priority.priority-normal:after {
+  border-top: 14px solid orange;
+}
+/* line 143, ../sass/_task.scss */
+.task-item .task-priority.priority-low {
+  background: gold;
+}
+/* line 145, ../sass/_task.scss */
+.task-item .task-priority.priority-low:after {
+  border-top: 14px solid gold;
+}
+/* line 149, ../sass/_task.scss */
+.task-item .task-priority:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  -webkit-transform: scale(1.0001, 1.0001);
+  -moz-transform: scale(1.0001, 1.0001);
+  -ms-transform: scale(1.0001, 1.0001);
+  -o-transform: scale(1.0001, 1.0001);
+  transform: scale(1.0001, 1.0001);
+  border-left: 22px solid #FFFFFF;
+  border-right: 22px solid #FFFFFF;
+}
+/* line 160, ../sass/_task.scss */
+.task-item .task-priority p {
+  padding: 10px 0 0 0;
+  color: #fff;
+  font-size: 1.1em;
+}
+/* line 167, ../sass/_task.scss */
+.task-item .task-status {
+  background: none repeat scroll 0 0 #94CD4C;
+  left: -36px;
+  margin-top: -16px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  /* &:before {
+     border-bottom: 5px solid rgba(0, 0, 0, 0);
+         border-right: 9px solid #3D7280;
+         border-top: medium none;
+         top: -5px;
+         content: "";
+         left: 0;
+         position: absolute;
+         transform: scale(1.00001, 1.00001);
+   }*/
+}
+/* line 187, ../sass/_task.scss */
+.task-item .task-status p {
+  color: #FFFFFF;
+  font-size: 1.1em;
+  line-height: 1;
+  padding: 7px 10px;
+  text-transform: uppercase;
+}
+/* line 195, ../sass/_task.scss */
+.task-item .task-badge {
+  position: absolute;
+  top: 40%;
+  right: -44px;
+}
+
+/* line 202, ../sass/_task.scss */
+.task-layout {
+  padding: 0 40px 0 0;
+}
+
+/* line 207, ../sass/_task.scss */
+.task-common .task-estimate {
+  margin: 5px 0 0 0;
+  font-size: 1.3em;
+  color: #000;
+}
+/* line 212, ../sass/_task.scss */
+.task-common .task-name {
+  padding-right: 20px;
+  position: relative;
+}
+/* line 215, ../sass/_task.scss */
+.task-common .task-name p {
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 16px;
+  white-space: nowrap;
+}
+/* line 226, ../sass/_task.scss */
+.task-common .task-name .btn-see-desc {
+  background: none repeat scroll 0 0 #0066CC;
+  border-radius: 50% 50% 50% 50%;
+  color: #FFFFFF;
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 3px 6px;
+  position: absolute;
+  right: 0;
+  top: -4px;
+}
+/* line 239, ../sass/_task.scss */
+.task-common .task-desc {
+  font-size: 1.3em;
+  line-height: 1.3;
+  color: #666;
+  padding: 10px 25px;
+  margin: 3px 0;
+}
+/* line 247, ../sass/_task.scss */
+.task-common .task-short-desc {
+  font-size: 1.3em;
+  line-height: 1.3;
+  margin-right: 10px;
+}
+
+/*.task-add {
+
+  height: 80px;
+      width: 80px;
+      display: block;
+      position: relative;
+      margin: 0 0 40px 0;
+  .inner {
+    box-shadow: 0 13px 22px -6px rgba(0, 0, 0, 0.3);
+    transition: margin-top 0.5s ease 0s;
+    
+    background-color: #FFFFFF;
+       background-position: 50% 0;
+       background-repeat: no-repeat;
+       background-size: cover;
+    
+       height: 100%;
+       position: absolute;
+       transition: margin-top 0.5s ease 0s;
+       width: 100%;
+  }
+  .cover {
+    height: 100%;
+     opacity: 0.7;
+     position: absolute;
+     width: 100%;
+     //@include background-image(linear-gradient(left top, (#1FBCCB, #1C32A1)));
+     background: #1FBCCB;
+ 
+  }
+  .shadow {
+    height: 100%;
+        position: absolute;
+        width: 100%;
+        box-shadow: 12px 0 7px -2px rgba(0, 0, 0, 0.3) inset;
+  }
+  .text {
+    bottom: 12px;
+        color: #FFFFFF;
+        font-size: 1.2em;
+        font-weight: bold;
+        left: 20px;
+        position: absolute;
+        right: 12px;
+  }
+  .border {
+    display: block;
+    border-bottom: 11px solid #D3D9DC;
+       border-left: 18px dashed rgba(0, 0, 0, 0);
+       border-right: 18px dashed rgba(0, 0, 0, 0);
+       position: relative;
+       top: -11px;
+    &:after {
+      box-shadow: 0 -4px 4px 1px rgba(255, 255, 255, 0.4);
+          content: "";
+          height: 1px;
+          left: -3%;
+          position: absolute;
+          top: 10px;
+          width: 106%;
+    }
+  }
+}*/
+/*.task-add {
+  padding: 0 20px;
+      display: block;
+      position: relative;
+      margin: 40px 0 0 0;
+      text-align: center;
+  .cube {
+    background: none repeat scroll 0 0 #94CD4C;
+       padding: 13px 25px 14px;
+       position: relative;
+  }
+  .cube-top {
+    display:block;
+    border-bottom: 17px solid #D3D9DC;
+    
+       position: relative;
+       z-index: 1;
+       border-left: 19px dashed rgba(0, 0, 0, 0);
+         border-right: 19px dashed rgba(0, 0, 0, 0);
+         clear: both;
+         margin: -30px -25px 13px;
+         &:after {
+           box-shadow: 0 -4px 12px 4px rgba(248, 249, 250, 0.8);
+              content: "";
+              height: 1px;
+              left: -4px;
+              position: absolute;
+              top: 17px;
+              width: 101%;
+         }
+  }
+  .text {
+    color: #fff;
+    font-size: 1.4em;
+        font-weight: 600;
+  }
+}*/
+/* line 104, ../sass/_task-add.scss */
+.btn-wrap {
+  text-align: right;
+  padding-right: 20px;
+}
+
+/* line 108, ../sass/_task-add.scss */
+.task-add {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-transform: uppercase;
+  text-align: center;
+  background: none repeat scroll 0 0 #94CD4C;
+  padding: 10px 35px 10px;
+  position: relative;
+  color: #fff;
+  line-height: 1;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* line 4, ../sass/_task-my.scss */
+.task-my .avatar {
+  margin-right: 15px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 1px 1px 0 1px #CCCCCC;
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  width: 60px;
+}
+/* line 16, ../sass/_task-my.scss */
+.task-my .avatar img {
+  vertical-align: middle;
+}
+/* line 21, ../sass/_task-my.scss */
+.task-my .task-name {
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #000;
+}
+/* line 27, ../sass/_task-my.scss */
+.task-my .nickname {
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #0066cc;
+  font-weight: 600;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+/* line 36, ../sass/_task-my.scss */
+.task-my .progress-wrap {
+  margin-top: 11px;
+}
+/* line 39, ../sass/_task-my.scss */
+.task-my .progress {
+  background: none repeat scroll 0 0 padding-box #F1F1F1;
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
+  height: 22px;
+  width: 100%;
+}
+/* line 46, ../sass/_task-my.scss */
+.task-my .progress-active {
+  background: none repeat scroll 0 0 #94CD4C;
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
+  height: 100%;
+}
