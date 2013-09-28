@@ -124,9 +124,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # third party
     'django_nose',
+    'south',
 
 
     # own
+    'core',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -159,3 +161,13 @@ LOGGING = {
 }
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+try:
+    from settings_local import *
+except ImportError:
+    pass
+
+try:
+    from settings_production import *
+except ImportError:
+    pass
