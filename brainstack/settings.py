@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # third party
     'django_nose',
+    'south',
 
 
     # own
