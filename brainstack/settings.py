@@ -128,6 +128,7 @@ INSTALLED_APPS = (
 
 
     # own
+    'core',
 )
 
 # A sample logging configuration. The only tangible logging
