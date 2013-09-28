@@ -10,10 +10,10 @@ class ProjectForm(forms.Form):
     username = forms.CharField(max_length=255, required=True,
         widget=forms.TextInput(attrs={'placeholder': 'Enter your name'}))
 
-    def create_user(username, email=None, password=None):
-        if not password:
-            password = UserProfile.objects.make_random_password(length=10)
-        user = UserProfile.objects.create_user(username, email, password)
+    def create_user(username):
+        password = UserProfile.objects.make_random_password(length=10)
+        user = UserProfile.objects.create_user(username=username,
+            password=password)
         return user
 
     def create_project(project_title, user):
