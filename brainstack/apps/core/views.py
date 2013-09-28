@@ -1,5 +1,5 @@
 from django.contrib.auth import login
-from django.views.generic import FormView
+from django.views.generic import FormView, TemplateView
 
 from core.forms import ProjectForm
 
