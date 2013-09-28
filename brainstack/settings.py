@@ -11,7 +11,15 @@ print sys.path
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
+
 )
+
+########## TEST SETTINGS
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+TEST_DISCOVER_TOP_LEVEL = PROJECT_DIR
+TEST_DISCOVER_ROOT = PROJECT_DIR
+TEST_DISCOVER_PATTERN = "test_*"
+
 
 MANAGERS = ADMINS
 
@@ -78,6 +86,8 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    'static',
+    '../static',
 )
 
 # List of finder classes that know how to find static files in
@@ -127,6 +137,7 @@ INSTALLED_APPS = (
 
 
     # own
+    'core'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -157,5 +168,3 @@ LOGGING = {
         },
     }
 }
-
-TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
