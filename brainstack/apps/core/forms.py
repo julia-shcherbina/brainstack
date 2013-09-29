@@ -10,28 +10,24 @@ class ProjectForm(forms.Form):
     username = forms.CharField(max_length=255, required=True,
         widget=forms.TextInput(attrs={'placeholder': 'Enter your name'}))
 
-    def create_user(username, email=None, password=None):
-        if not password:
-            password = UserProfile.objects.make_random_password(length=10)
-        user = UserProfile.objects.create_user(username, email, password)
-        return user
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        if UserProfile.objects.filter(username__exact=username).exists():
+            raise forms.ValidationError(
+                "This username is occupied, please enter a different name")
+        else:
+            return self.cleaned_data['username']
 
-    def create_project(project_title, user):
-        project = Project.objects.create(title=project_title)
-        project.participants.add(user)
-        project.save()
-        return project
-
-    def create_participant(user, project):
-        participant = Participation.objects.create(user=user, project=project,
-            role=ROLE.OWNER)
-        return participant
 
     def save(self):
         username = self.cleaned_data['username']
         project_title = self.cleaned_data['title']
-        user = self.create_user(username)
-        project = self.create_project(project_title, user)
-        self.create_participant(user, project)
+        password = UserProfile.objects.make_random_password(length=10)
+        user = UserProfile.objects.create_user(username=username,
+            password=password)
+        user.temporary_password = password
+        user.save()
+        project = Project.objects.create(title=project_title)
+        Participation.objects.create(user=user, project=project, role=ROLE.OWNER)
         return (project, user)
 
