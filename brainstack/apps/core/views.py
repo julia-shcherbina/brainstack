@@ -1,6 +1,6 @@
 from django.core.urlresolvers import reverse
 from django.contrib.auth import login, authenticate
-from django.views.generic import FormView, TemplateView
+from django.views.generic import FormView, TemplateView, DetailView
 from django.shortcuts import redirect
 
 from core.choices import ROLE
@@ -17,10 +17,11 @@ class HomeView(FormView):
         user = authenticate(username=user.username, password=user.temporary_password)
         login(self.request, user)
         self.kwargs['project_id'] = project.id
+        self.kwargs['hash'] = project._hash
         return super(HomeView, self).form_valid(form)
 
     def get_success_url(self):
-        return reverse('spa', args=[self.kwargs['project_id']])
+        return reverse('project-details', args=[self.kwargs['hash']])
 
 
 class SPAView(TemplateView):
@@ -69,3 +70,14 @@ class SPAJoinView(FormView):
         return reverse('spa', args=[self.kwargs['project_id']])
 
 
+class ProjectView(DetailView):
+    model = Project
+    slug_field = '_hash'
+    template_name = 'project/project-view.html'
+    context_object_name = 'project'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProjectView, self).get_context_data(**kwargs)
+        context['request'] = self.request
+        return context
+        

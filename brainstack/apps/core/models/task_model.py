@@ -16,9 +16,10 @@ class Task(models.Model):
         ordering = ['priority']
 
     title = models.CharField(_('title'), max_length=255)
-    number = models.PositiveIntegerField(_('number'), )
+    number = models.PositiveIntegerField(_('number'), blank=True, null=True)
     project = models.ForeignKey(
         Project, related_name='tasks', verbose_name=_('project'))
+    description = models.TextField(blank=True, null=True)
     estimate = models.IntegerField(
         _('estimate'), blank=True, null=True,
         help_text=_('in minutes'))
@@ -28,12 +29,12 @@ class Task(models.Model):
     executor = models.ForeignKey(Participation, blank=True, null=True)
     priority = models.PositiveIntegerField(_('priority'), choices=PRIORITY,
         default=PRIORITY.NORMAL)
-    created_by = models.ForeignKey(UserProfile, related_name='created_task')
+    created_by = models.ForeignKey(UserProfile, related_name='created_task', blank=True, null=True)
 
     def __unicode__(self):
         return self.title
 
     def save(self, *args, **kwargs):
         # FIXME: seems there will be a problem
-        self.number = self.project.tasks.count() + 1
+        #self.number = self.project.tasks.count() + 1
         super(Task, self).save(*args, **kwargs)
