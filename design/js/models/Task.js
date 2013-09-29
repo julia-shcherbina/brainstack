@@ -5,4 +5,3 @@ app.Task = Backbone.Model.extend({
         title: 'No title'
     }
 });
-

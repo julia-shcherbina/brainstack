@@ -1,7 +1,7 @@
-var app  = app || {};
+var app = app || {};
 
 app.TaskDeckView = Backbone.View.extend({
-    el: '#books',
+    el: '#task-table',
     initialize: function( initialTasks ) {
         this.collection = new app.TaskDeck( initialTasks );
         this.render();
@@ -12,10 +12,9 @@ app.TaskDeckView = Backbone.View.extend({
         }, this );
     },
     renderTask: function( item ) {
-        console.log(app);
         var taskView = new app.TaskView({
             model: item
         });
-        this.$el.append( app.TaskView.render().el );
+        this.$el.append( taskView.render().el );
     }
-})
+});
