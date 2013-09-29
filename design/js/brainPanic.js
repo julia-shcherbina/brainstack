@@ -4,20 +4,14 @@ $(function(){
   (function() {
     var popup = $('.js-popup-task-add'),
         showPopup = $('.js-task-add');
-        //close = popup.find('.popup-close');
         
-    showPopup.click('live', function(e) {
+    showPopup.click(function(e) {
       popup.hide();       
       //popup.fadeIn('slow');
       popup.animate({ height: "show"}, 500, function() {});
       
       e.preventDefault();    
     });
-
-    /*close.click('live', function(e) {
-      popup.hide();   
-      e.preventDefault();    
-    });*/
   })();
   
   //CHECKBOX
@@ -74,7 +68,7 @@ $(function(){
         close = popup.find('.popup-close'),
         outside = $(popup).find('.popup-overlay');
         
-    showPopup.click('live', function(e) {
+    showPopup.click(function(e) {
       popup.fadeIn('fast');
       e.preventDefault();    
     });
@@ -88,12 +82,12 @@ $(function(){
       e.preventDefault();   
     });
     
-    outside.click('live', function(e) {
+    outside.click(function(e) {
       popup.hide();   
       e.preventDefault();    
     });
     
-    close.click('live', function(e) {
+    close.click(function(e) {
       popup.hide();   
       e.preventDefault();    
     });
