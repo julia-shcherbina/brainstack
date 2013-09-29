@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
 
 {% block content %}
   <div class="launch">
@@ -50,3 +50,9 @@
     </div>
   </div>
 {% endblock content %}
+
+{% block js %}
+  {{ block.super }}
+  <script src="{% static 'js/third_party/jquery-1.9.0.js' %}"></script>
+  <script src="{% static 'js/brainPanic.js' %}"></script>
+{% endblock js %}

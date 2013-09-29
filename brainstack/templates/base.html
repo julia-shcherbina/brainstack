@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -12,9 +14,9 @@
     {% block title %}BrainPanic{% endblock title %}
   </title>
 
-  <link media="screen, projection" rel="stylesheet" href="stylesheets/normalize.css">
-  <link media="print" rel="stylesheet" href="stylesheets/print.css">
-  <link media="screen, projection" rel="stylesheet" href="stylesheets/screen.css">
+  <link media="screen, projection" rel="stylesheet" href="{% static 'stylesheets/normalize.css' %}">
+  <link media="print" rel="stylesheet" href="{% static 'stylesheets/print.css' %}">
+  <link media="screen, projection" rel="stylesheet" href="{% static 'stylesheets/screen.css' %}">
 
   <!--[if lt IE 9]>
     <script src="js/html5.js"></script>
@@ -60,11 +62,7 @@
     {% endblock footer %}
   </div>
 </footer>
-
-<script src="js/third_party/jquery-1.9.0.js"></script>
-<script src="js/brainPanic.js"></script>
-{% block extra_script %}
-{% endblock extra_script %}
-
+{% block js %}
+{% endblock js %}
 </body>
 </html>
