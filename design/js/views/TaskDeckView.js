@@ -1,9 +1,10 @@
 var app = app || {};
 
 app.TaskDeckView = Backbone.View.extend({
-    el: '#task-table',
+    el: '#task-deck',
     initialize: function( initialTasks ) {
-        this.collection = new app.TaskDeck( initialTasks );
+        this.collection = new app.TaskDeck();
+        this.collection.fetch({reset: true});
         this.render();
     },
     render: function() {
@@ -15,6 +16,7 @@ app.TaskDeckView = Backbone.View.extend({
         var taskView = new app.TaskView({
             model: item
         });
+        console.log(this.$el);
         this.$el.append( taskView.render().el );
     }
 });

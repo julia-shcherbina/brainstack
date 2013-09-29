@@ -7,6 +7,7 @@ app.TaskView = Backbone.View.extend({
     render: function() {
         console.log( this.model.get('title'));
         this.$el.html(this.template(this.model.toJSON()));
+        console.log(this.el)
         return this;
     }
 });
