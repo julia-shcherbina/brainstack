@@ -1,6 +1,52 @@
-{% load staticfiles %}
+{% extends "base.html" %}
+
 
 {% block content %}
-    This will be a main page of brainstack application
-    <img src="{% static 'image.jpg' %}" alt="Image">
+  <div class="launch">
+    <div class="launch-pos">
+
+      <a class="cube1" href="#">
+        <div class="cube-inner">
+          <i class="cube-cover"></i>
+          <i class="cube-shadow"></i>
+          <div class="cube-text">
+            <h1>BrainStack</h1>
+          </div>
+          <i class="cube-border"></i>
+        </div>
+      </a>
+
+      <a class="cube2" href="javascript:;">
+        <div class="cube-inner">
+          <i class="cube-cover"></i>
+          <i class="cube-shadow"></i>
+          <div class="cube-text">
+            <p>This project is about ... </p>
+            <p>We just want to add a bit game in development process</p>
+            <p>The main goal is ...</p>
+          </div>
+          <i class="cube-border"></i>
+        </div>
+      </a>
+
+      <a class="cube3" href="javascript:;">
+        <div class="cube-inner">
+          <i class="cube-cover"></i>
+          <i class="cube-shadow"></i>
+          <div class="cube-text">
+            <form action="./">
+              <label for="username">Add username</label>
+              <input type="text" id="username" placeholder="username">
+              <label for="project-name">Add name of projects</label>
+              <input type="text" id="project-name" placeholder="project name">
+              <input type="submit" value="create project" class="btn-project-create">
+            </form>
+
+          </div>
+          <i class="cube-border"></i>
+        </div>
+      </a>
+
+    </div>
+  </div>
 {% endblock content %}
