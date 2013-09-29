@@ -63,7 +63,7 @@
   </div>
 </footer>
 
-<a href="/logout">logout</a>
+<a href="{% url 'logout' %}">logout</a>
 {% block js %}
   <script src="{% static 'js/third_party/jquery-1.9.0.js' %}"></script>
   <script src="{% static 'js/brainPanic.js' %}"></script>

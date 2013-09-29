@@ -29,8 +29,8 @@ class SPAView(TemplateView):
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated():
             project = Project.objects.get(id=kwargs['project_id'])
-            if request.user.username in project.participants.values_list(
-                'user__username', flat=True):
+            if project.participants.filter(
+                user__username=request.user.username).exists():
                 return super(SPAView, self).dispatch(request, *args, **kwargs)
 
         return redirect('home')
@@ -53,7 +53,7 @@ class SPAJoinView(FormView):
                 self.kwargs['project_id'] = project.id
                 return redirect(self.get_success_url())
 
-        return super(SPAView, self).dispatch(request, *args, **kwargs)
+        return super(SPAJoinView, self).dispatch(request, *args, **kwargs)
 
 
     def form_valid(self, form):
