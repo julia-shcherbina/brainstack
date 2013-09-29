@@ -59,8 +59,7 @@ class SPAJoinView(FormView):
     def form_valid(self, form):
         user = form.save()
         project = Project.objects.get(_hash=self.kwargs['project_hash'])
-        participant = Participation.objects.create(user=user, project=project,
-            role=ROLE.CONTRIBUTOR)
+        Participation.objects.create(user=user, project=project, role=ROLE.CONTRIBUTOR)
         user = authenticate(username=user.username, password=user.temporary_password)
         login(self.request, user)
         self.kwargs['project_id'] = project.id
