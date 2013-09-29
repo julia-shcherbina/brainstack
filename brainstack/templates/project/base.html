@@ -25,16 +25,15 @@
 <body>
   
 <header class="head">
-  <div class="user">
-    You are logged in as <span>{{ request.user }}</span>
+  <div class="wrapper">
+    <div class="user">
+      You are logged in as <span>{{ request.user }}</span>
+    </div>
   </div>
 </header>
+
 {% block content %}{% endblock content %}
-<footer>
-  <div class="wrapper">
-      
-  </div>  
-</footer>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 <script type="text/javascript" src="{% static "js/project/app.js" %}"></script>

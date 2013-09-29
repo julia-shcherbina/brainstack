@@ -1183,7 +1183,27 @@ h1, h2 {
   margin: 0 0 5px;
 }
 /* line 133, ../sass/_popup.scss */
-.popup-task-add input[type="text"] {
+.popup-task-add input[type="submit"] {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-transform: uppercase;
+  text-align: center;
+  background: none repeat scroll 0 0 #94CD4C;
+  padding: 10px 35px 10px;
+  position: relative;
+  color: #fff;
+  line-height: 1;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+/* line 147, ../sass/_popup.scss */
+.popup-task-add input[type="text"], .popup-task-add input[type="number"] {
   color: #000;
   background: #fff;
   display: block;
@@ -1197,21 +1217,28 @@ h1, h2 {
   background: none repeat scroll 0 0 #FFFFFF;
   border-radius: 10px 10px 10px 10px;
   padding: 7px 12px;
-  width: 100%;
 }
 /* line 61, ../sass/_mixin.scss */
-.popup-task-add input[type="text"].placeholder {
+.popup-task-add input[type="text"].placeholder, .popup-task-add input[type="number"].placeholder {
   color: black;
 }
 /* line 64, ../sass/_mixin.scss */
-.popup-task-add input[type="text"]:-moz-placeholder {
+.popup-task-add input[type="text"]:-moz-placeholder, .popup-task-add input[type="number"]:-moz-placeholder {
   color: black;
 }
 /* line 67, ../sass/_mixin.scss */
-.popup-task-add input[type="text"]::-webkit-input-placeholder {
+.popup-task-add input[type="text"]::-webkit-input-placeholder, .popup-task-add input[type="number"]::-webkit-input-placeholder {
   color: black;
 }
-/* line 149, ../sass/_popup.scss */
+/* line 163, ../sass/_popup.scss */
+.popup-task-add input[type="text"] {
+  width: 100%;
+}
+/* line 166, ../sass/_popup.scss */
+.popup-task-add input[type="number"] {
+  width: 250px;
+}
+/* line 169, ../sass/_popup.scss */
 .popup-task-add textarea {
   resize: none;
   border: none;
@@ -1311,4 +1338,19 @@ h1, h2 {
 /* line 7, ../sass/_link-page.scss */
 .link-page .cube2 .cube-text p {
   text-align: center;
+}
+
+/* line 3, ../sass/_user.scss */
+.user {
+  text-align: center;
+  background: none repeat scroll 0 0 #FFFFFF;
+  box-shadow: 0 0 15px #A8BDC9;
+  padding: 16px 20px;
+  margin: 0 0 20px 0;
+  font-size: 1.4em;
+}
+/* line 10, ../sass/_user.scss */
+.user span {
+  color: #0066cc;
+  font-size: 1.5em;
 }

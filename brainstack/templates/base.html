@@ -28,12 +28,6 @@
 </head>
 <body style="background: #fff;">
 
-<header class="head">
-  <div class="wrapper">
-    {% block header %}
-    {% endblock header %}
-  </div>
-</header>
 
 <section>
   <div class="wrapper">
@@ -42,28 +36,19 @@
   </div>
 </section>
 
-<footer>
-  <!--print css
-  brain picture
-  ipod
-  foundation
-  color for tracker
-  color as design as apple
 
-  table page
-  increase  height
-    badge like transition
-  color ??
-
-
-    -->
-  <div class="wrapper">
-    {% block footer %}
-    {% endblock footer %}
-  </div>
+<footer class="launch-footer">
+   {% block footer %}
+  <p class="copyright">© BrainStack 2013</p>
+   <span><a href="https://github.com/julia-shcherbina">Julia Scherbina</a></span>
+   <span><a href="#">Max Kharandziuk</a></span>
+   <span><a href="#">Andrii Iushchuk</a></span>
+   
+  {% endblock footer %}
 </footer>
 
-<a href="{% url 'logout' %}">logout</a>
+<!--<a href="{% url 'logout' %}">logout</a>-->
+
 {% block js %}
   <script src="{% static 'js/third_party/jquery-1.9.0.js' %}"></script>
   <script src="{% static 'js/brainPanic.js' %}"></script>
