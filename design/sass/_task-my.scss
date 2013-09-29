@@ -17,21 +17,38 @@
       vertical-align: middle;
     }
   }
-
   .task-name {
-    font-weight: 600;
-    font-size: 1.3em;
-    color: #000;
-    
+    p {
+      display: inline;
+      font-weight: 600;
+      font-size: 1.3em;
+      color: #000;
+      line-height: 1.4;
+    }
+    .btn-see-desc {
+      background: none repeat scroll 0 0 #0066CC;
+         border-radius: 50% 50% 50% 50%;
+         color: #FFFFFF;
+         font-size: 1.4em;
+         font-weight: bold;
+         line-height: 1.4;
+         padding: 3px 7px 1px;
+         @include inline-block(top);
+         cursor:pointer;
+    }
+  }
+  .task-desc {
+    padding: 10px 0;
   }
   .nickname {
-     margin-right: 15px;
+     margin-right: 10px;
     display: inline-block;
     vertical-align: middle;
     color: $color-link;
     font-weight: 600;
     font-size: 1.3em;
     font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
   }
   .progress-wrap {
      margin-top: 11px;

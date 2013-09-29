@@ -22,6 +22,9 @@
         position: relative;
         z-index:1;
         width: 248px;
+        &:hover {
+          cursor: default;
+        }
     .cube-text {
       color: #FFFFFF;
         
@@ -47,23 +50,33 @@
   }
   .cube2 {
     display: block;
-       height: 320px;
-       left: 227px;
-       position: absolute;
-       top: -35px;
-       width: 330px;
-       z-index: 3;
+        height: 340px;
+        left: 211px;
+        position: absolute;
+        top: -58px;
+        width: 345px;
+        z-index: 3;
+        &:hover {
+          cursor: default;
+        }
     .cube-text {
       color: #FFFFFF;
-        
-         font-weight: 100;
-         left: 12px;
-         position: absolute;
-         top: 67px;
+          font-weight: 100;
+          left: 12px;
+          position: absolute;
+          right: 24px;
+          top: 32px;
          p {
             font-family: "Lobster",'Helvetica', Arial, Sans-serif;   
              font-size: 2.2em;
-           margin: 0 0 10px 0;
+           margin: 0 0 24px 0;
+           strong {
+             cursor: pointer;
+             border-bottom: 1px solid #fff;
+             &:hover {
+               border-bottom: 1px solid rgba(0,0,0,0);
+             }
+           }
          }
     }
     .cube-inner {
@@ -186,4 +199,21 @@
         margin: 0 0 2px;
     }
   }
+}
+
+.launch-footer {
+  @include background-image(linear-gradient(left top,#0066CC,lighten(#0066CC, 25%)));
+  position: absolute;
+  left: -39px;
+  top: 28px;
+  width: 174px;
+   @include transform(rotate(-45deg));
+  p {
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px 0;
+        text-align: center;
+  }
+  
 }
