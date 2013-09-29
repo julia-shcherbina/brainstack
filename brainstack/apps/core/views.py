@@ -48,8 +48,8 @@ class SPAJoinView(FormView):
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated():
             project = Project.objects.get(_hash=kwargs['project_hash'])
-            if request.user.username in project.participants.values_list(
-                'user__username', flat=True):
+            if project.participants.filter(
+                user__username=request.user.username).exists():
                 self.kwargs['project_id'] = project.id
                 return redirect(self.get_success_url())
 
