@@ -5,6 +5,7 @@ app.TaskDeckView = Backbone.View.extend({
     initialize: function( initialTasks ) {
         this.collection = new app.TaskDeck();
         this.collection.fetch({reset: true});
+        console.log('adfad');
         this.render();
     },
     render: function() {
