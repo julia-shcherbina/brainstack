@@ -792,6 +792,10 @@ h1, h2 {
   width: 248px;
 }
 /* line 25, ../sass/_launch.scss */
+.launch .cube1:hover {
+  cursor: default;
+}
+/* line 28, ../sass/_launch.scss */
 .launch .cube1 .cube-text {
   color: #FFFFFF;
   font-weight: bold;
@@ -799,12 +803,12 @@ h1, h2 {
   position: absolute;
   top: 67px;
 }
-/* line 33, ../sass/_launch.scss */
+/* line 36, ../sass/_launch.scss */
 .launch .cube1 .cube-text h1 {
   color: #fff;
   font-size: 3.6em;
 }
-/* line 38, ../sass/_launch.scss */
+/* line 41, ../sass/_launch.scss */
 .launch .cube1 .cube-inner {
   background: none repeat scroll 0 0 #94CD4C;
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #94cd4c), color-stop(100%, #a0d360));
@@ -813,35 +817,49 @@ h1, h2 {
   background-image: -o-linear-gradient(left top, #94cd4c, #a0d360);
   background-image: linear-gradient(left top, #94cd4c, #a0d360);
 }
-/* line 43, ../sass/_launch.scss */
+/* line 46, ../sass/_launch.scss */
 .launch .cube1 .cube-inner:hover {
   margin-top: -15px;
 }
-/* line 48, ../sass/_launch.scss */
+/* line 51, ../sass/_launch.scss */
 .launch .cube2 {
   display: block;
-  height: 320px;
-  left: 227px;
+  height: 340px;
+  left: 211px;
   position: absolute;
-  top: -35px;
-  width: 330px;
+  top: -58px;
+  width: 345px;
   z-index: 3;
 }
-/* line 56, ../sass/_launch.scss */
+/* line 59, ../sass/_launch.scss */
+.launch .cube2:hover {
+  cursor: default;
+}
+/* line 62, ../sass/_launch.scss */
 .launch .cube2 .cube-text {
   color: #FFFFFF;
   font-weight: 100;
   left: 12px;
   position: absolute;
-  top: 67px;
+  right: 24px;
+  top: 32px;
 }
-/* line 63, ../sass/_launch.scss */
+/* line 69, ../sass/_launch.scss */
 .launch .cube2 .cube-text p {
   font-family: "Lobster",'Helvetica', Arial, Sans-serif;
   font-size: 2.2em;
-  margin: 0 0 10px 0;
+  margin: 0 0 24px 0;
 }
-/* line 69, ../sass/_launch.scss */
+/* line 73, ../sass/_launch.scss */
+.launch .cube2 .cube-text p strong {
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+}
+/* line 76, ../sass/_launch.scss */
+.launch .cube2 .cube-text p strong:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+/* line 82, ../sass/_launch.scss */
 .launch .cube2 .cube-inner {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #0066cc), color-stop(100%, #4da6ff));
   background-image: -webkit-linear-gradient(left top, #0066cc, #4da6ff);
@@ -849,11 +867,11 @@ h1, h2 {
   background-image: -o-linear-gradient(left top, #0066cc, #4da6ff);
   background-image: linear-gradient(left top, #0066cc, #4da6ff);
 }
-/* line 73, ../sass/_launch.scss */
+/* line 86, ../sass/_launch.scss */
 .launch .cube2 .cube-inner:hover {
   margin-top: -15px;
 }
-/* line 78, ../sass/_launch.scss */
+/* line 91, ../sass/_launch.scss */
 .launch .cube3 {
   display: block;
   height: 222px;
@@ -863,22 +881,22 @@ h1, h2 {
   width: 326px;
   z-index: 2;
 }
-/* line 86, ../sass/_launch.scss */
+/* line 99, ../sass/_launch.scss */
 .launch .cube3 .cube-text {
   left: 95px;
   position: absolute;
   top: 16px;
 }
-/* line 91, ../sass/_launch.scss */
+/* line 104, ../sass/_launch.scss */
 .launch .cube3 .cube-inner {
   background: #fff;
 }
-/* line 93, ../sass/_launch.scss */
+/* line 106, ../sass/_launch.scss */
 .launch .cube3 .cube-inner:hover {
   margin-top: -15px;
 }
 
-/* line 102, ../sass/_launch.scss */
+/* line 115, ../sass/_launch.scss */
 .launch .cube-inner {
   background-color: #FFFFFF;
   background-position: 50% 0;
@@ -894,21 +912,21 @@ h1, h2 {
   transition: margin-top 0.5s ease 0s;
   width: 100%;
 }
-/* line 113, ../sass/_launch.scss */
+/* line 126, ../sass/_launch.scss */
 .launch .cube-cover {
   height: 100%;
   opacity: 0.7;
   position: absolute;
   width: 100%;
 }
-/* line 120, ../sass/_launch.scss */
+/* line 133, ../sass/_launch.scss */
 .launch .cube-shadow {
   height: 100%;
   position: absolute;
   width: 100%;
   box-shadow: -14px 0 7px -2px rgba(0, 0, 0, 0.2) inset;
 }
-/* line 127, ../sass/_launch.scss */
+/* line 140, ../sass/_launch.scss */
 .launch .cube-border {
   display: block;
   border-bottom: 11px solid #D3D9DC;
@@ -917,7 +935,7 @@ h1, h2 {
   position: relative;
   top: -11px;
 }
-/* line 134, ../sass/_launch.scss */
+/* line 147, ../sass/_launch.scss */
 .launch .cube-border:after {
   box-shadow: 0 -4px 4px 1px rgba(255, 255, 255, 0.4);
   content: "";
@@ -928,7 +946,7 @@ h1, h2 {
   width: 106%;
 }
 
-/* line 148, ../sass/_launch.scss */
+/* line 161, ../sass/_launch.scss */
 .launch .btn-project-create {
   background: none repeat scroll 0 0 #94CD4C;
   border-radius: 12px 12px 12px 12px;
@@ -945,7 +963,7 @@ h1, h2 {
   vertical-align: middle;
   margin: 36px 0 0 0;
 }
-/* line 165, ../sass/_launch.scss */
+/* line 178, ../sass/_launch.scss */
 .launch input[type="text"] {
   color: #000;
   background: #fff;
@@ -974,12 +992,38 @@ h1, h2 {
 .launch input[type="text"]::-webkit-input-placeholder {
   color: black;
 }
-/* line 182, ../sass/_launch.scss */
+/* line 195, ../sass/_launch.scss */
 .launch form label {
   color: #000000;
   display: block;
   font-size: 1.6em;
   margin: 0 0 2px;
+}
+
+/* line 204, ../sass/_launch.scss */
+.launch-footer {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #0066cc), color-stop(100%, #4da6ff));
+  background-image: -webkit-linear-gradient(left top, #0066cc, #4da6ff);
+  background-image: -moz-linear-gradient(left top, #0066cc, #4da6ff);
+  background-image: -o-linear-gradient(left top, #0066cc, #4da6ff);
+  background-image: linear-gradient(left top, #0066cc, #4da6ff);
+  position: absolute;
+  left: -39px;
+  top: 28px;
+  width: 174px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* line 211, ../sass/_launch.scss */
+.launch-footer p {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px 0;
+  text-align: center;
 }
 
 /* line 4, ../sass/_popup.scss */
@@ -1007,46 +1051,28 @@ h1, h2 {
 /* line 21, ../sass/_popup.scss */
 .popup-wrapper {
   padding: 18px 8px;
-  background: #fcfcfc;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  -ms-border-radius: 9px;
-  -o-border-radius: 9px;
-  border-radius: 9px;
-  -webkit-box-shadow: rgba(222, 249, 158, 0.9) 0 0 0 8px;
-  -moz-box-shadow: rgba(222, 249, 158, 0.9) 0 0 0 8px;
-  box-shadow: rgba(222, 249, 158, 0.9) 0 0 0 8px;
-  border: 1px solid #eee;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
   position: absolute;
   left: 50%;
   top: 50%;
 }
-/* line 32, ../sass/_popup.scss */
+/* line 29, ../sass/_popup.scss */
 .popup-wrapper .popup-close {
-  background: none repeat scroll 0 0 rgba(222, 249, 158, 0.9);
-  border-radius: 50% 50% 50% 50%;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
   color: #666666;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 16px;
   padding: 10px 14px;
   position: absolute;
-  right: -18px;
+  right: 2px;
   text-align: center;
   text-decoration: none;
   text-transform: lowercase;
-  top: -18px;
+  top: 1px;
 }
 
-/* line 50, ../sass/_popup.scss */
-.popup {
-  width: 700px;
-  margin-left: -350px;
-  margin-top: -270px;
-}
-
-/* line 56, ../sass/_popup.scss */
+/* line 44, ../sass/_popup.scss */
 .popup-task-add {
   display: none;
   margin: 30px 0 0;
@@ -1074,17 +1100,17 @@ h1, h2 {
      @include scale(1.0001);
    }*/
 }
-/* line 83, ../sass/_popup.scss */
+/* line 71, ../sass/_popup.scss */
 .popup-task-add .btn-wrap {
   text-align: center;
   padding: 0;
 }
-/* line 87, ../sass/_popup.scss */
+/* line 75, ../sass/_popup.scss */
 .popup-task-add .wrap {
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2);
   padding: 25px 40px;
 }
-/* line 92, ../sass/_popup.scss */
+/* line 80, ../sass/_popup.scss */
 .popup-task-add .cube-top {
   display: block;
   border-bottom: 11px solid #D3D9DC;
@@ -1095,7 +1121,7 @@ h1, h2 {
   clear: both;
   margin: -37px -42px 10px;
 }
-/* line 102, ../sass/_popup.scss */
+/* line 90, ../sass/_popup.scss */
 .popup-task-add .cube-top:after {
   content: "";
   height: 1px;
@@ -1104,7 +1130,7 @@ h1, h2 {
   top: 17px;
   width: 101%;
 }
-/* line 112, ../sass/_popup.scss */
+/* line 100, ../sass/_popup.scss */
 .popup-task-add .cube-bottom-shadow {
   bottom: -42px;
   height: 42px;
@@ -1113,7 +1139,7 @@ h1, h2 {
   width: 94%;
   z-index: 3;
 }
-/* line 119, ../sass/_popup.scss */
+/* line 107, ../sass/_popup.scss */
 .popup-task-add .cube-bottom-shadow:before {
   background: url("../images/static/shadow.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
   content: "";
@@ -1123,7 +1149,7 @@ h1, h2 {
   top: 0;
   width: 100px;
 }
-/* line 128, ../sass/_popup.scss */
+/* line 116, ../sass/_popup.scss */
 .popup-task-add .cube-bottom-shadow:after {
   background: url("../images/static/shadow.png") no-repeat scroll 100% 0 rgba(0, 0, 0, 0);
   content: "";
@@ -1133,14 +1159,14 @@ h1, h2 {
   right: 0;
   top: 0;
 }
-/* line 139, ../sass/_popup.scss */
+/* line 127, ../sass/_popup.scss */
 .popup-task-add label {
   color: #666;
   display: block;
   font-size: 1.6em;
   margin: 0 0 5px;
 }
-/* line 145, ../sass/_popup.scss */
+/* line 133, ../sass/_popup.scss */
 .popup-task-add input[type="text"] {
   color: #000;
   background: #fff;
@@ -1169,7 +1195,7 @@ h1, h2 {
 .popup-task-add input[type="text"]::-webkit-input-placeholder {
   color: black;
 }
-/* line 161, ../sass/_popup.scss */
+/* line 149, ../sass/_popup.scss */
 .popup-task-add textarea {
   resize: none;
   border: none;
@@ -1199,4 +1225,65 @@ h1, h2 {
 /* line 67, ../sass/_mixin.scss */
 .popup-task-add textarea::-webkit-input-placeholder {
   color: black;
+}
+
+/* line 3, ../sass/awards.scss */
+.popup-awards {
+  width: 400px;
+  margin-left: -200px;
+  margin-top: -130px;
+}
+
+/* line 9, ../sass/awards.scss */
+.awards ul {
+  padding: 3px 20px;
+}
+/* line 11, ../sass/awards.scss */
+.awards ul li {
+  padding: 0 0 13px 0;
+}
+/* line 13, ../sass/awards.scss */
+.awards ul li:last-child {
+  padding: 0;
+}
+/* line 18, ../sass/awards.scss */
+.awards .number {
+  background: #F0F0F0;
+  border-radius: 50% 50% 50% 50%;
+  box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  line-height: 1;
+  padding: 6px 9px 5px;
+  vertical-align: middle;
+  border: 3px solid #FFFFFF;
+  color: #666;
+  font-size: 1.4em;
+  font-weight: 100;
+}
+/* line 33, ../sass/awards.scss */
+.awards header {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5em;
+  margin-left: 7px;
+}
+/* line 39, ../sass/awards.scss */
+.awards p {
+  font-size: 1.3em;
+  padding: 2px 0 0 41px;
+}
+/* line 44, ../sass/awards.scss */
+.awards .award-high .number {
+  color: #fff;
+  background: red;
+}
+/* line 50, ../sass/awards.scss */
+.awards .award-normal .number {
+  color: #fff;
+  background: orange;
+}
+/* line 56, ../sass/awards.scss */
+.awards .award-low .number {
+  color: #fff;
+  background: gold;
 }

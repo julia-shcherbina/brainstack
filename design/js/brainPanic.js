@@ -67,4 +67,36 @@ $(function(){
     });
   })();
   
+  // POPUP AWARDS
+  (function() {
+    var popup = $('.js-popup-awards'),
+        showPopup = $('.js-see-popup-awards'),
+        close = popup.find('.popup-close'),
+        outside = $(popup).find('.popup-overlay');
+        
+    showPopup.click('live', function(e) {
+      popup.fadeIn('fast');
+      e.preventDefault();    
+    });
+  
+    $(document).keydown(function(e) {
+      if (e.which == 27) {
+         popup.hide();   
+      } else {
+        return true;
+      }
+      e.preventDefault();   
+    });
+    
+    outside.click('live', function(e) {
+      popup.hide();   
+      e.preventDefault();    
+    });
+    
+    close.click('live', function(e) {
+      popup.hide();   
+      e.preventDefault();    
+    });
+  })();
+  
 });

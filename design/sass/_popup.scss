@@ -20,37 +20,25 @@
 }
 .popup-wrapper {
   padding: 18px 8px;
-  background: #fcfcfc;
-  @include border-radius(9px);
-  @include box-shadow(rgba(222, 249, 158, .9) 0 0 0 8px);
-  border: 1px solid #eee;
-  
+  background-color: #FFFFFF;
+      box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
   position: absolute;
   left: 50%;
   top: 50%;
   
   .popup-close {
-    background: none repeat scroll 0 0 rgba(222, 249, 158, 0.9);
-    border-radius: 50% 50% 50% 50%;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
     color: #666666;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 16px;
-    padding: 10px 14px;
-    position: absolute;
-    right: -18px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: lowercase;
-    top: -18px;
+       font-size: 24px;
+       font-weight: 400;
+       line-height: 16px;
+       padding: 10px 14px;
+       position: absolute;
+       right: 2px;
+       text-align: center;
+       text-decoration: none;
+       text-transform: lowercase;
+       top: 1px;
   }
-}
-
-.popup {
-  width: 700px;
-  margin-left: -350px;
-  margin-top: -270px;  
 }
 
 .popup-task-add {
