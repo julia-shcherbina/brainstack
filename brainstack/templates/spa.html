@@ -9,6 +9,13 @@
 
 {% block js %}
     {{ block.super }}
+    <script src="{% static 'js/third_party/underscore-min.js' %}"></script>
+    <script src="{% static 'js/third_party/jquery-2.0.3.min.js' %}"></script>
+    <script src="{% static 'js/third_party/backbone-min.js' %}"></script>
+    <script src="{% static 'js/models/Task.js' %}"></script>
+    <script src="{% static 'js/collections/TaskDeck.js' %}"></script>
+    <script src="{% static 'js/views/TaskView.js' %}"></script>
+    <script src="{% static 'js/views/TaskDeckView.js' %}"></script>
     <script src="{% static 'js/app.js' %}"></script>
     
 {% endblock js %} 
