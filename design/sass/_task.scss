@@ -126,26 +126,26 @@ h1,h2 {
     &.priority-high {
        background: $color-priority-high;
        &:after {
-         border-top: 14px solid $color-priority-high;
+         border-top: 16px solid $color-priority-high;
        }
     }
     &.priority-normal {
        background: $color-priority-normal;
        &:after {
-         border-top: 14px solid $color-priority-normal;
+         border-top: 16px solid $color-priority-normal;
        }
     }
     &.priority-low {
        background: $color-priority-low;
        &:after {
-         border-top: 14px solid $color-priority-low;
+         border-top: 16px solid $color-priority-low;
        }
     }
     &:after {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -14px;
+      bottom: -16px;
       @include scale(1.0001);
     
       border-left: 20px solid #FFFFFF;
@@ -161,14 +161,12 @@ h1,h2 {
   } 
   .task-status {
     background: none repeat scroll 0 0 #94CD4C;
-       left: -36px;
-       margin-top: -16px;
+       left: -6px;
+       margin-top: -11px;
        position: absolute;
        text-align: center;
        top: 50%;
-       //width: 39px;
-    
-    
+       @include transform(rotate(-90deg));
    /* &:before {
       border-bottom: 5px solid rgba(0, 0, 0, 0);
           border-right: 9px solid #3D7280;
@@ -183,7 +181,7 @@ h1,h2 {
       color: #FFFFFF;
           font-size: 1.1em;
           line-height: 1;
-          padding: 7px 10px;
+          padding: 4px 3px;
           text-transform: uppercase;
     }
   }
@@ -199,6 +197,13 @@ h1,h2 {
 }
 
 .task-common {
+  .task-checkbox {
+    //margin-left: 10px;
+    //@include inline-block;
+    position: absolute;
+    left: -27px;
+    top: 9px;
+  }
   .task-estimate {
     margin: 5px 0 0 0;
     font-size: 1.3em;
@@ -229,6 +234,7 @@ h1,h2 {
          position: absolute;
          right: 0;
          top: -4px;
+         cursor:pointer;
     }
   }
   .task-desc {

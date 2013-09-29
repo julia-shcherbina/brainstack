@@ -58,7 +58,7 @@
   margin: 30px 0 0;
      padding: 0 40px 0 20px;
      position: relative;
-  &:before {
+ /* &:before {
     border-bottom: 13px solid rgba(0,0,0,.2);
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
@@ -78,15 +78,64 @@
         right: 109px;
         top: -13px;
     @include scale(1.0001);
-  }
+  }*/
      
   .btn-wrap {
     text-align: center;
+    padding: 0;
   }   
   .wrap {
-         box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+       box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2);
+         //box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
          padding: 25px 40px;
   }
+  .cube-top {
+    display: block;
+    border-bottom: 11px solid #D3D9DC;
+    
+       position: relative;
+       z-index: 1;
+       border-left: 19px dashed rgba(0, 0, 0, 0);
+         border-right: 19px dashed rgba(0, 0, 0, 0);
+         clear: both;
+          margin: -37px -42px 10px;
+         &:after {
+           //box-shadow: 0 -4px 12px 4px rgba(248, 249, 250, 0.8);
+              content: "";
+              height: 1px;
+              left: -4px;
+              position: absolute;
+              top: 17px;
+              width: 101%;
+         }
+  }
+  .cube-bottom-shadow {
+    bottom: -42px;
+       height: 42px;
+       margin: 0 -39px;
+       position: absolute;
+       width: 94%;
+       z-index: 3;
+    &:before {
+      background: url("../images/static/shadow.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+         content: "";
+         height: 42px;
+         left: 0;
+         position: absolute;
+         top: 0;
+         width: 100px;
+    }
+    &:after {
+      background: url("../images/static/shadow.png") no-repeat scroll 100% 0 rgba(0, 0, 0, 0);
+       content: "";
+       height: 42px;
+       left: 100px;
+       position: absolute;
+       right: 0;
+       top: 0;
+    }
+  }
+  
      label {
        color: #666;
          display: block;
